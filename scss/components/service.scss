@@ -1,0 +1,26 @@
+.service{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        width: 1448px;
+        margin-top: 102px;
+    }
+
+    &__item{
+        display: flex;
+        gap: 24px;
+    }
+    &__title{
+        font-weight: 500;
+        font-size: 32px;
+        color: #081323;
+    }
+    &__description{
+        font-weight: 500;
+        font-size: 20px;
+        color: #828282;
+    }
+}

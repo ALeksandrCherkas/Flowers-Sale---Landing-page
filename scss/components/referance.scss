@@ -1,0 +1,82 @@
+.referance {
+    &__title {
+        font-weight: 500;
+        font-size: 64px;
+        color: #081323;
+      }
+  
+    &__description {
+        margin: 27px 0 82px;
+        font-weight: 400;
+        font-size: 24px;
+        color: #4f4f4f;
+    }
+
+
+
+    &__wrapper {
+      margin-top: 182px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    &__images {
+      display: flex;
+      gap: 32px;
+  
+      &-block1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+  
+    &__image {
+      position: relative;
+      overflow: hidden;
+  
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 50px;
+      }
+  
+      &-text {
+        white-space: nowrap;
+        position: absolute;
+        bottom: -70px;
+        right: 50%;
+        transform: translateX(50%);
+        font-weight: 600;
+        font-size: 64px;
+        color: #fff;
+        opacity: 0;
+        transition: opacity 0.8s ease, transform 0.8s ease;
+        pointer-events: none;
+  
+        &--active {
+          opacity: 1;
+          bottom: 50%;
+          transform: translate(50%, 50%);
+          z-index: 21;
+          
+        }
+      }
+  
+      &--active::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 20;
+        width: 100%;
+        height: 100%;
+        border-radius: 50px;
+        background-color: rgba(34, 34, 34, 0.5); // более лёгкий фон
+        backdrop-filter: blur(5px);              
+      }
+    }
+  }
+  
